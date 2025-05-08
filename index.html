@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quién quiere ser millonario? - Cruz Roja Ecuatorina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de inicio -->
+    <div class="start-screen" id="start-screen">
+        <div class="logo">
+            <img src="./logo_cruz_roja.jpg" alt="¿Quién quiere ser millonario?">
+        </div>
+        <h1 class="start-title">CRUZ ROJA ECUATORIANA</h1>
+        <button class="start-btn" id="start-game">INICIAR JUEGO</button>
+        <p>20 preguntas aleatorias sobre la Cruz Roja y Media Luna Roja</p>
+    </div>
+
+    <!-- Juego principal (oculto inicialmente) -->
+    <div class="container" style="display: none;">
+        <!-- Mostrador de premios -->
+        <div class="prize-display" id="prize-display">
+            <div>Premio actual:</div>
+            <div class="prize-amount" id="prize-amount">$0</div>
+            <div class="prize-level" id="prize-level">Nivel: 1</div>
+        </div>
+
+        <!-- Logo del juego -->
+        <div class="logo">
+            <img src="./logo_cruz_roja.jpg" alt="¿Quién quiere ser millonario?">
+        </div>
+
+        <h1>CRUZ ROJA ECUATORIANA</h1>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        
+        <div class="timer-container" id="timer-container">
+            <div class="timer-bar" id="timer-bar"></div>
+        </div>
+        
+        <div class="score" id="score">Puntaje: 0</div>
+        
+        <div class="difficulty-indicator" id="difficulty-indicator"></div>
+        
+        <div class="question-container">
+            <div class="question" id="question"></div>
+            <div class="options" id="options"></div>
+        </div>
+        
+        <div class="lifelines">
+            <button class="lifeline" id="fifty-fifty">50:50</button>
+            <button class="lifeline" id="audience-help">Público</button>
+            <button class="lifeline" id="phone-friend">Llamada</button>
+        </div>
+        
+        <div class="feedback" id="feedback"></div>
+        
+        <button class="next-btn" id="next-btn" disabled>SIGUIENTE</button>
+        <button class="restart-btn" id="restart-btn">JUGAR DE NUEVO</button>
+    </div>
+
+    <!-- Elementos de audio -->
+    <audio id="background-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="correct-sound">
+        <source src="https://www.soundjay.com/buttons/sounds/button-09.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="wrong-sound">
+        <source src="https://www.soundjay.com/buttons/sounds/button-10.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="lifeline-sound">
+        <source src="https://www.soundjay.com/buttons/sounds/button-21.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
